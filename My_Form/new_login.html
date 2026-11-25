@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign in | QuizApp</title>
+    <link rel="stylesheet" href="new.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+    
+    <div class="auth-container">
+
+        <!-- <a class="auth-brand" href="index.html">Quiz<span>App</span></a> -->
+       <div class="auth-card"> 
+
+        <h1>Welcome back</h1>
+        <p class="subtitle">
+            Login to continue to your account.
+        </p>
+
+      <form id="loginForm">
+
+        <div class="input-group">
+            <label>Username</label>
+            <input type="text" id="loginUsername" placeholder="Enter your username" autocomplete="username" required >
+        </div>
+
+
+        <div class="input-group">
+            <label for="password">Password</label>
+
+            <div class="password-wrapper">
+                <input type="password" id="password" placeholder="Enter your password" minlength="8" autocomplete="current-password" required>
+                <i class="fa-solid fa-eye" id="togglePassword"></i>
+            </div>
+
+            <p class="password-rule" id="passwordRule" aria-live="polite">
+                At least 8 characters
+            </p>
+        </div>
+
+
+            <button type="submit">  Login  </button>
+
+      </form>
+
+        <!-- <p id="loginMessage" class="message"></p> -->
+      <p id="loginMessage" class="message" role="alert"></p>
+
+        <p class="switch">
+            Don't have an account?
+            <a href="new.html">Register</a>
+        </p>
+
+      </div>
+
+    </div>
+
+<script src="config.js"></script>
+<script src="new_login.js"></script>
+
+</body>
+</html>

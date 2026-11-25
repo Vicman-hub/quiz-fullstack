@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Take Exam</title>
+    <link rel="stylesheet" href="quiz.css" >
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&family=Plus+Jakarta+Sans:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+
+    <style>
+              /* Premium Animated Button */
+        .start-btn {
+            width: 100%;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+        }
+
+        .start-btn:hover {
+            background: var(--btn-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(79, 70, 229, 0.5);
+        }
+
+        .start-btn:active {
+            transform: translateY(1px);
+        }
+    </style>
+
+</head>
+<body  class="light-theme">
+
+    <div class="theme-wrapper">
+        <!-- <button id="theme-toggle">🌙</button> -->
+
+      <div id="container">  
+        
+        <!-- <div class="quiz-header">
+            <span class="badge">
+                V1.0 • Advanced
+            </span>
+            <h1 class="quiz-title">Programming Quiz</h1>
+            <p class="quiz-subtitle">
+              Welcome to this curated collection of challenging Python and JavaScript conceptual exam questions.
+            </p>
+        </div>
+
+        <ul class="rules-list">
+            <li>The exam consists of multiple-choice questions.</li>
+            <li>You have exactly <strong>8 minutes</strong> to complete the test.</li>
+            <li>Ensure you submit before the timer reaches zero.</li>
+            <li>Answers are saved automatically when you click an option.</li>
+        </ul>
+
+        <div class="quiz-action">
+            <p class="action-text">// Ready to test your limits?</p>
+            <button id="start-btn">Start Exam</button>
+        </div> -->
+
+    </div> 
+
+  </div>
+
+    <div id="pop-container">
+      <div id="pop-up">
+
+        <span id="pop-text"> Do you want to submit?</span> 
+
+        <span id="pop-btn"> 
+            <button id="Yes-btn">Yes</button>
+            <button id="No-btn">No</button> 
+        </span>
+
+      </div>
+
+    </div>
+
+    <script src="config.js"></script>
+    <script src="quiz.js"> </script>
+    <script src="logout.js"></script>
+
+</body>
+</html>

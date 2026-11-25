@@ -1,0 +1,134 @@
+/*  */
+
+/* 1. Global Reset & Body */
+* {
+    box-sizing: border-box; /* Ensures padding doesn't affect overall width */
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #e0f2fe; /* Soft light blue background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 40px 20px;
+}
+ 
+/* 2. Form Container */
+#form-container {
+    background-color: #ffffff;
+    max-width: 600px; /* Makes the form wider and more substantial */
+    width: 100%;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* Soft, elegant shadow */
+}
+
+/* 3. Header Styling */
+#form-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#form-header h2 {
+    color: #1e293b;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+#form-header p {
+    color: #64748b;
+    font-size: 15px;
+}
+
+/* 4. Form Groups & Layout */
+#form-group {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+/* Creates a grid for side-by-side inputs (Great concept to teach!) */
+#form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+}
+
+/* 5. Labels and Inputs */
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #334155;
+    font-weight: 600;
+    font-size: 14px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #cbd5e1;
+    border-radius: 6px;
+    font-size: 15px;
+    color: #1e293b;
+    background-color: #f8fafc;
+    transition: all 0.3s ease; /* Smooth transition for the focus state */
+}
+
+/* Changes border color when the user clicks inside the input */
+input:focus, select:focus, textarea:focus {
+    outline: none;
+    border-color: #0ea5e9; /* Turns blue */
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.1);
+}
+
+/* 6. Textarea specific styling */
+textarea {
+    resize: vertical; /* Allows the user to only resize the box up and down */
+}
+
+/* 7. Submit Button */
+#submit-btn {
+    width: 100%;
+    background-color: #0ea5e9;
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0284c7; /* Darkens slightly on hover */
+}
+
+.optional-text {
+    color: #8396b1; /* A soft, lighter gray */
+    font-weight: normal; /* Removes the bold weight from the main label */
+    font-size: 13px; /* Makes it slightly smaller */
+    /* font-style: italic; */
+    margin-left: 4px; /* Adds a tiny bit of breathing room from the main question */
+}
+
+
+/* Message Box Styling */
+#messageBox {
+    width: 100%;
+    max-width: 450px;
+    margin-top: 1rem;
+}
+
+#messageBox p {
+    padding: 1rem;
+    border-radius: 6px;
+    font-size: 0.875rem;
+    font-weight: 500;
+    text-align: center;
+}

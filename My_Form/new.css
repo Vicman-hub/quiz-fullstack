@@ -1,0 +1,667 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+    background: linear-gradient(135deg, #f0f4ff 0%, #ede9fe 50%, #faf5ff 100%);
+    color: #1e293b;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ====================
+   APP NAVIGATION
+   ==================== */
+.app-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 5%;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.app-nav .logo {
+    font-size: 1.25rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    color: #0f172a;
+}
+
+.app-nav .logo span {
+    color: #6366f1;
+}
+
+.logout-btn {
+    background: #f1f5f9;
+    color: #475569;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width: auto;
+    flex-shrink: 0;
+    white-space: nowrap;
+}
+ 
+
+.logout-btn:hover {
+    background: #fee2e2;
+    color: #ef4444;
+}
+
+/* ====================
+   AUTH PAGES & CARDS
+   ==================== */
+.auth-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 480px;
+    background: rgba(255, 255, 255, 0.9);
+    backdrop-filter: blur(16px);
+    padding: 48px;
+    border-radius: 24px;
+    border: 1px solid rgba(255, 255, 255, 1);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04), 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.auth-card h1 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #0f172a;
+    margin-bottom: 8px;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    color: #64748b;
+    font-size: 0.95rem;
+    margin-bottom: 32px;
+}
+
+/* ====================
+   FORM INPUTS
+   ==================== */
+
+
+.input-row {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+
+.input-group {
+    margin-bottom: 20px;
+    position: relative;
+    width: 100%;
+}
+
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #475569;
+    margin-bottom: 8px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 14px 16px;
+    background: #f8fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    outline: none;
+    font-size: 0.95rem;
+    color: #1e293b;
+    transition: all 0.2s ease;
+}
+
+.input-group input:focus {
+    background: #ffffff;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 4px rgba(99, 102, 241, 0.1);
+}
+
+.password-wrapper { position: relative; }
+#togglePassword {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #94a3b8;
+    transition: color 0.2s;
+}
+#togglePassword:hover { color: #6366f1; }
+
+/* ====================
+   BUTTONS
+   ==================== */
+button[type="submit"] {
+    width: 100%;
+    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 100%);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+    margin-top: 8px;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.4);
+}
+
+.switch {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #64748b;
+}
+
+.switch a {
+    color: #6366f1;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+button[type="submit"]:disabled {
+  opacity: .65;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+
+/* ====================
+   RESULTS DASHBOARD
+   ==================== */
+.dashboard-card {
+    max-width: 900px;
+}
+
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 24px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    background: white;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+th, td {
+    padding: 16px 24px;
+    border-bottom: 1px solid #f1f5f9;
+}
+
+th {
+    background: #f8fafc;
+    color: #475569;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+tbody tr { transition: background 0.2s; }
+tbody tr:hover { background: #f8fafc; }
+
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+.status-pass { background: #dcfce7; color: #166534; }
+.status-fail { background: #fee2e2; color: #991b1b; }
+
+.results-actions {
+    display: flex;
+    justify-content: space-between;  /* first left, second right */
+    align-items: center;
+    gap: 12px;
+    margin-top: 32px;
+    flex-wrap: nowrap;               /* keep one row on mobile */
+}
+
+.results-actions button {
+    flex: 0 1 auto;
+    width: auto;
+    max-width: calc(50% - 6px);      /* prevents overflow on small screens */
+    min-width: 0;
+    padding: 14px 18px;
+}
+
+@media (max-width: 600px) {
+    .input-row { flex-direction: column; gap: 0; }
+    .auth-card { padding: 32px 24px; }
+}
+
+.results-actions { gap: 8px; }
+
+    .results-actions button {
+        padding: 12px 10px;
+        font-size: 0.82rem;
+        line-height: 1.3;
+    }
+This keeps
+
+
+
+
+
+
+/*  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+/* body {
+    font-family: Arial, sans-serif;
+    background: #f4f5f7;
+    color: #202124;
+} */
+
+/* ====================
+   AUTH PAGES
+   ==================== */
+/* 
+.auth-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.auth-card {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 42px;
+    border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+}
+
+.login-card {
+    max-width: 430px;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    margin-bottom: 35px;
+}
+
+.logo span {
+    color: #2563eb;
+}
+
+.auth-card h1 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: #6b7280;
+    margin-bottom: 28px;
+} */
+
+/* ====================
+   FORM
+   ==================== */
+
+/* .name-row {
+    display: flex;
+    gap: 14px;
+}
+
+.name-row .input-group {
+    width: 50%;
+} */
+
+/* Flexbox to place fields side-by-side
+.input-row {
+  display: flex;
+  gap: 20px; Space between the two columns 
+  width: 100%;
+} */
+/* 
+.input-row .input-group {
+  flex: 1; Ensures both inputs in the row take up equal space
+}
+
+
+.input-group {
+    margin-bottom: 18px;
+    position: relative; add to your existing .input-group rule
+
+}
+
+.input-group label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 7px;
+} */
+
+/* .input-group input {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 9px;
+    outline: none;
+    font-size: 15px;
+    transition: 0.2s;
+}
+
+.input-group input:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+#password {
+    padding-right: 44px;    prevents text from going under the icon 
+} */
+/* 
+#togglePassword {
+    position: absolute;
+    right: 14px;
+    bottom: 18px;  aligns with the input's vertical padding 
+    font-size: 16px;
+    color: #6b7280;
+    cursor: pointer;
+    z-index: 1;
+} */
+
+#togglePassword:hover {
+    color: #2563eb;
+}
+
+.password-rule {
+    display: none;
+    margin-top: 7px;
+    font-size: 13px;
+    color: #6b7280;
+}
+
+.password-rule.show {
+    display: block;
+}
+
+.password-rule.valid {
+    color: #15803d;
+}
+
+.password-rule.invalid {
+    color: #dc2626;
+}
+
+
+
+
+
+.password-wrapper {
+    position: relative;
+}
+
+#password {
+    padding-right: 44px;
+}
+
+#togglePassword {
+    position: absolute;
+    right: 14px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+
+
+
+
+
+button {
+    width: 100%;
+    border: none;
+    padding: 14px;
+    border-radius: 9px;
+    background: #2563eb;
+    color: white;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    background: #1d4ed8;
+} 
+
+/* ====================
+   MESSAGES
+   ==================== */
+/* 
+.message {
+    margin-top: 16px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.success {
+    color: #15803d;
+}
+
+.error {
+    color: #dc2626;
+}
+
+.switch {
+    margin-top: 24px;
+    text-align: center;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.switch a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 700;
+} */
+
+/* ====================
+   NAVBAR
+   ==================== */
+/* 
+nav {
+    height: 72px;
+    padding: 0 7%;
+    background: white;
+    border-bottom: 1px solid #e5e7eb;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+nav .logo {
+    margin: 0;
+}
+
+.logout {
+    width: auto;
+    padding: 9px 18px;
+    background: #111827;
+}
+
+.logout:hover {
+    background: #374151;
+} */
+
+/* ====================
+   HOME
+   ==================== */
+/*
+.home {
+    min-height: calc(100vh - 72px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+    text-align: center;
+    padding: 30px;
+}
+
+.home > div {
+    max-width: 650px;
+}
+
+.welcome-label {
+    font-size: 12px;
+    font-weight: 800;
+    color: #2563eb;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.home h1 {
+    font-size: 48px;
+    letter-spacing: -1.5px;
+    margin-bottom: 15px;
+}
+
+.home p {
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+.home-actions {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.home-actions a {
+    padding: 12px 22px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 700;
+    background: #2563eb;
+    color: white;
+}
+
+.home-actions a:last-child {
+    background: #111827;
+}
+
+
+
+/* ====================
+   MOBILE
+   ==================== */
+
+/* @media (max-width: 480px) {
+    .auth-card {
+        padding: 28px 22px;
+    } */
+
+    /* Target BOTH rows to stack vertically on mobile */
+ /*   .name-row,
+    .input-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .name-row .input-group,
+    .input-row .input-group {
+        width: 100%;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+}     */
+
+
+
+
+/* ====================
+   MOBILE
+   ==================== */
+
+   /*
+@media (max-width: 600px) {
+
+    .auth-card {
+        padding: 28px 22px;
+    }
+
+    .name-row {
+        flex-direction: column;
+        gap: 0;
+    }
+
+    .name-row .input-group {
+        width: 100%;
+    }
+
+    .home h1 {
+        font-size: 36px;
+    }
+
+    nav {
+        padding: 0 20px;
+    }
+} */ 

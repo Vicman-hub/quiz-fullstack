@@ -1,0 +1,110 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Your Results</title>
+   <link rel="stylesheet" href="corrections.css">
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+
+
+
+<body>
+
+    <nav class="app-nav">
+        <div class="logo">Quiz<span>App</span></div>
+        <button id="logout-btn" class="logout-btn">
+            <i class="fa-solid fa-arrow-right-from-bracket"></i> Logout
+        </button>
+    </nav>
+
+    <div class="auth-container">
+        <div class="auth-card dashboard-card">
+            <h1>Performance Dashboard</h1>
+            <p class="subtitle">Review your past examination attempts and scores.</p>
+            
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <!-- <th>Candidate</th> -->
+                            <th>Score</th>
+                            <th>Status</th>
+                            <th>Duration</th>
+                            <th>Date Completed</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        <!-- Data injected via JS -->
+                        <tr><td colspan="4" style="text-align:center; padding: 40px;">Loading results...</td></tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- <button onclick="window.location.href='quiz.html'" style="margin-top: 32px; max-width: 250px;">
+                Take New Assessment
+            </button>
+
+             <button id="view-corrections-btn">View Corrections</button> -->
+
+            <div class="results-actions">
+                <button onclick="window.location.href='quiz.html'">
+                    Take New Assessment
+                </button>
+                <button id="view-corrections-btn">
+                    View Corrections
+                </button>
+            </div>
+
+
+
+        </div>
+    </div>
+
+
+
+
+
+    <!--
+    <div class="auth-container">
+        <div class="auth-card" style="max-width: 800px;">
+            <h1>Exam History</h1>
+            <p class="subtitle">Your previous quiz attempts and scores.</p>
+            
+            <div class="table-container">
+                <table id="resultsTable">
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Score</th>
+                            <th>Time Taken</th>
+                            <th>Date & Time</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tableBody">
+                        Data injected via JS
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="home-actions" style="margin-top: 30px;">
+                <a href="quiz.html">Take Another Quiz</a>
+            </div>
+        </div>
+    </div>
+ -->
+
+
+    <script src="config.js"></script>
+    <script src="results.js"></script>
+    <script src="logout.js"></script>
+
+</body>
+</html>
+
+
+
+

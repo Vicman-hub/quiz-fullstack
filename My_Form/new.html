@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="new.css" >
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+<body>
+
+<div class="auth-container">
+
+    <div class="auth-card">
+
+        <!-- <a class="auth-brand" href="index.html">Quiz<span>App</span></a> -->
+        <!-- <div class="logo">AUTH<span>APP</span></div> -->
+
+        <h1>Create account</h1>
+        <p class="subtitle">Register to get started.</p>
+
+        <form id="registerForm">            
+
+        <div class="name-row">
+
+            <div class="input-group">
+                <label>First name</label>
+                <input
+                    type="text"
+                    maxlength="50"
+                    id="firstname"
+                    placeholder="John"
+                    autocomplete="given-name"
+                    required
+                >
+            </div>
+
+            <div class="input-group">
+                <label>Last name</label>
+                <input
+                    type="text"
+                    id="lastname"
+                    placeholder="Doe"
+                    autocomplete="family-name"
+                    required
+                >
+            </div>
+
+            </div>
+
+            <div class="input-group">
+                <label>Username</label>
+                <input type="text" id="username" placeholder="johndoe" autocomplete="username" autocapitalize="none" spellcheck="false" required>
+            </div>
+
+
+    <!-- NEW: Email & Phone Number Row -->
+    <div class="input-row">
+
+        <div class="input-group">
+        <label for="email">Email address</label>
+        <input type="email" id="email" placeholder="john@example.com"  autocomplete="email" required>
+        </div>
+
+
+        <div class="input-group">
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" placeholder="08012345678" required>
+        </div>
+        
+    </div>
+
+  
+
+            <div class="input-group">
+    <label for="password">Password</label>
+
+    <div class="password-wrapper">
+        <input
+            type="password"
+            id="password"
+            placeholder="Enter your password"
+            minlength="8"
+            required
+        >
+        <i class="fa-solid fa-eye" id="togglePassword"></i>
+    </div>
+
+    <p class="password-rule" id="passwordRule" aria-live="polite">
+        At least 8 characters
+    </p>
+</div>
+
+            <button type="submit">
+                Create account
+            </button>
+
+        </form>
+
+        <!-- <p id="registerMessage" class="message"> </p> -->
+        <p id="registerMessage" class="message" role="alert"></p>
+
+        <p class="switch">
+            Already have an account?
+            <a href="new_login.html">Login</a>
+        </p>
+
+    </div>
+
+</div>
+
+<script src="config.js"></script>
+<script src="auth.js"></script>
+</body>
+</html>
+
