@@ -63,9 +63,12 @@ async function fetchQuestions(topic) {
         `${API_BASE}/questions/?topic=${encodeURIComponent(topic)}&limit=10`,
         { method: "GET", credentials: "include" }
     );
-    if (!response.ok) throw new Error("Could not load questions. Is the backend running and seeded?");
+    if (!response.ok) {
+        const err = await response.json().catch(() => ({}));
+        throw new Error(err.error || `Request failed (${response.status})`);
+    }
     return response.json();
-}
+ }
 
 function showQuestion() {
     const q = questions[currentQuestion];

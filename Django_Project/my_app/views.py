@@ -108,7 +108,7 @@ class CookieTokenObtainPairView(TokenObtainPairView):
                 max_age=30 * 60,          # matches ACCESS_TOKEN_LIFETIME
                 httponly=True,            # JavaScript cannot read it
                 secure=True,             # True in production (HTTPS only)
-                samesite='Lax',
+                samesite='None',
                 path='/',
             )
             response.set_cookie(
@@ -117,7 +117,7 @@ class CookieTokenObtainPairView(TokenObtainPairView):
                 max_age=2 * 24 * 60 * 60, # matches REFRESH_TOKEN_LIFETIME
                 httponly=True,
                 secure=True,
-                samesite='Lax',
+                samesite='None',
                 path='/',
             )
 
@@ -248,7 +248,7 @@ class CookieTokenRefreshView(TokenRefreshView):
             max_age=25 * 60,
             httponly=True,
             secure=True,
-            samesite='Lax',
+            samesite='None',
             path='/',
         )
 
@@ -259,7 +259,7 @@ class CookieTokenRefreshView(TokenRefreshView):
                 max_age=2 * 24 * 60 * 60,
                 httponly=True,
                 secure=True,
-                samesite='Lax',
+                samesite='None',
                 path='/',
             )
 
