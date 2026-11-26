@@ -147,14 +147,13 @@ CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOWED_ORIGINS = [
     "https://quiz-frontend.onrender.com",    
     "http://localhost:3000",
-    # "http://localhost:5173",
-    # "http://127.0.0.1:5173",
-    # Add your deployed frontend URL here later (e.g., "https://my-frontend.com")
 ]
+
 
 CSRF_TRUSTED_ORIGINS = [
    "https://quiz-frontend.onrender.com",
    "https://quiz-backend.onrender.com",
+   "http://localhost:3000",
 ]
 
 
@@ -195,6 +194,7 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = BASE_DIR / "staticfiles"
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 # Email
 # https://docs.djangoproject.com/en/6.1/topics/email/#topic-email-configuration
