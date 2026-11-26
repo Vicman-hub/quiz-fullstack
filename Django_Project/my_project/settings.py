@@ -145,14 +145,14 @@ else:
 CORS_ALLOW_CREDENTIALS = True
 # Allow requests from your frontend (e.g., standard Vite development port)
 CORS_ALLOWED_ORIGINS = [
-    "https://quiz-frontend.onrender.com",    
+    "https://myquizapp-amber.vercel.app/",   
     "http://localhost:3000",
 ]
 
 
 CSRF_TRUSTED_ORIGINS = [
-   "https://quiz-frontend.onrender.com",
-   "https://quiz-backend.onrender.com",
+    "https://myquizapp-amber.vercel.app/", 
+   "https://vicman-quiz.onrender.com",
    "http://localhost:3000",
 ]
 
