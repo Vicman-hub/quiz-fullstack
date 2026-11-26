@@ -8,6 +8,7 @@ document.getElementById('registerForm').addEventListener('submit', async (e) => 
     const btn = form.querySelector('button[type="submit"]');
     const original = btn.textContent;
     const API_BASE = window.APP_CONFIG.API_BASE;
+    
 // Then use ${API_BASE}/signup/, ${API_BASE}/login/, etc.
 
     btn.disabled = true;

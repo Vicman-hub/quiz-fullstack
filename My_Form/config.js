@@ -10,7 +10,7 @@ const isLocal =
 
 window.APP_CONFIG = {
   API_BASE: isLocal
-    ? "http://127.0.0"
+    ? "http://127.0.0.1:8000/api"
     : "https://vicman-quiz.onrender.com/api",
   PASS_MARK: 10,
   EXAM_MINUTES: 8,
